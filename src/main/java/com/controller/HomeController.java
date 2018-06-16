@@ -1,8 +1,11 @@
 package com.controller;
 
 import com.model.ReturnValue;
+import com.pojo.UserInfo;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
@@ -15,11 +18,11 @@ public class HomeController {
 
     @ResponseBody
     @RequestMapping("/index")
-    public  String index(HttpServletRequest request, HttpSession session){
-        String wxName = request.getParameter("nickName");
+    public  String index(@RequestBody UserInfo userInfo, HttpServletRequest request, HttpSession session){
+
         ReturnValue returnValue = new ReturnValue();
-        if(wxName != null){
-            returnValue.put("wx_name",wxName);
+        if(userInfo != null){
+            returnValue.put("wx_name",userInfo.getNickName());
             returnValue.put("welcome","WELCOME TO FARM!");
         }
         return returnValue.toString();

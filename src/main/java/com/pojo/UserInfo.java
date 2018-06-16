@@ -7,14 +7,41 @@ public class UserInfo implements Serializable{
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 用户Id
+     */
     private String userId;
-
-    private String wxId;
-
-    private String wxName;
-
-    private String wxSex;
-
+    /**
+     * 头像url
+     */
+    private String avatarUrl;
+    /**
+     * 城市
+     */
+    private String city;
+    /**
+     * 省份
+     */
+    private String province;
+    /**
+     * 昵称
+     */
+    private String nickName;
+    /**
+     * 国籍
+     */
+    private String country;
+    /**
+     * 性别
+     */
+    private Integer gender;
+    /**
+     * 语言
+     */
+    private String language;
+    /**
+     * 创建时间
+     */
     private Date createTime;
 
     public String getUserId() {
@@ -25,28 +52,60 @@ public class UserInfo implements Serializable{
         this.userId = userId;
     }
 
-    public String getWxId() {
-        return wxId;
+    public String getAvatarUrl() {
+        return avatarUrl;
     }
 
-    public void setWxId(String wxId) {
-        this.wxId = wxId;
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
     }
 
-    public String getWxName() {
-        return wxName;
+    public String getCity() {
+        return city;
     }
 
-    public void setWxName(String wxName) {
-        this.wxName = wxName;
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    public String getWxSex() {
-        return wxSex;
+    public String getProvince() {
+        return province;
     }
 
-    public void setWxSex(String wxSex) {
-        this.wxSex = wxSex;
+    public void setProvince(String province) {
+        this.province = province;
+    }
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public Integer getGender() {
+        return gender;
+    }
+
+    public void setGender(Integer gender) {
+        this.gender = gender;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
     }
 
     public Date getCreateTime() {
